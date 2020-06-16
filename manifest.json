@@ -1,0 +1,13 @@
+{
+  "name": "dazaar",
+  "short_name": "dazaar",
+  "description": "landing page for dazaar",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "rgb(232, 59, 73)",
+  "icons": [{
+    "src": "/assets/logo.svg",
+    "type": "image/svg"
+  }]
+}

@@ -1,1 +1,1 @@
-# dazaar-www
+# DAZAAR - landing page html
