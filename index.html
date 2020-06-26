@@ -1,4 +1,4 @@
-<html class="bg-backlight">
+<html class="bg-backlight w-100">
   <head>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -121,7 +121,7 @@
       gtag('config', 'UA-169242451-1');
     </script>
   </head>
-  <body class="overflow-x-hidden m0 df columns align-center lh-copy spotlight relative l-ssx-proximity">
+  <body class="overflow-x-hidden m0 df columns align-center lh-copy spotlight relative l-ssx-proximity w-100">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8PDPTX"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -165,7 +165,7 @@
         </g>
       </defs>
     </svg>
-    <div id="scroller" class="z2 fixed right-0 bottom-0 top-0 maxw-mci df columns justify-center align-end border-box m2 fade-in a-duration-long a-fill-both a-ease-in-out">
+    <div id="scroller" class="z2 fixed right-0 bottom-0 top-0 maxw-mci df columns justify-center align-end border-box p2 fade-in a-duration-long a-fill-both a-ease-in-out">
       <svg
         class="pointer mv2 overflow-visible"
         style="width: 1.5em; height: 1.5em; --hue: 355;"
@@ -259,28 +259,31 @@
         </g>
       </g>
     </svg>
-    <main class="z1 df columns align-center w-100">
-      <header class="fixed df w-vm-100 top-0 left-0 right-0 m-auto-h mt3 h-3 z2">
-        <svg
-          class="h-100 mh2 pointer"
-          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-          viewBox="0 0 50 50">
-          <use
-            href="#emblem"
-            style="--fill: url('#emblem-gradient');"/>
-        </svg>
-      </header>
-      <section
-        class="tc minh-vh-100 w-vm-100 df columns align-center justify-between unselectable ss-start invisible"
-        data-scale="1.5"
-        data-coordinates="0 30vh">
-        <div class="f-180 pt4 ph2">
-          <h1 class="uppercase ls-big mb0 f-160 superlight">
+    <main class="z1 df columns align-stretch w-100">
+      <header class="fixed bg-backlight top-0 left-0 right-0 z2" style="--alpha: 0.8;">
+        <div class="df w-vm-100 m-auto-h pv3 h-3">
+          <svg
+            class="h-100 mh2 pointer"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            viewBox="0 0 50 50">
+            <use
+              href="#emblem"
+              style="--fill: url('#emblem-gradient');"/>
+          </svg>
+          <h1 class="uppercase ls-big mb0 mt0 superlight pointer"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
             <span class="h-0 db clip">Dazaar</span>
-            <svg  style="max-height: 7vmin;" viewBox="0 0 160 32">
+            <svg class="h-100" viewBox="0 0 160 32">
               <use href="#logo-letters"/>
             </svg>
           </h1>
+          </div>
+      </header>
+      <section
+        class="tc minh-vh-100 w-100 df columns align-center justify-between unselectable ss-start invisible"
+        data-scale="1.5"
+        data-coordinates="0 30vh">
+        <div class="f-180 pt5 ph2">
           <p class="family-mono f-120" rel="description">
             Peer-to-Peer Internet and Marketplaces
           </p>
@@ -357,7 +360,7 @@
           </p>
         </div>
       </section>
-      <footer class="w-vm-100 df columns align-center justify-center">
+      <footer class="w-vm-100 df columns align-center align-self-center justify-center">
         <svg class="w-3 h-3 mt4 overflow-visible" viewBox="0 0 50 50">
           <use href="#emblem" style="--fill: url(#emblem-gradient);"/>
         </svg>
@@ -366,9 +369,18 @@
         </p>
         <div class="df f-70 justify-between align-end w-100">
           <div class="m3">
-            <svg class="mb2 w-4" viewBox="0 0 160 32">
-              <use href="#logo-letters"/>
-            </svg>
+            <div class="h-2 mb2">
+              <svg
+                class="h-100 mr1"
+                viewBox="0 0 50 50">
+                <use
+                  href="#emblem"
+                  style="--fill: url('#emblem-gradient');"/>
+              </svg>
+              <svg class="h-100" viewBox="0 0 160 32">
+                <use href="#logo-letters"/>
+              </svg>
+            </div>
             <div class="copyright witespace-nowrap">
               © DAZAAR <script>document.write(new Date().getFullYear())</script>
               <br />All rights reserved.
