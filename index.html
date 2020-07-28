@@ -39,14 +39,11 @@
             })
             const { hue, points = 120, rotation = 0, position = "absolute",
               opacity = 1, scale, coordinates } = change.target.dataset
+            change.target.querySelectorAll('.a-paused').forEach(el => el.classList.remove('a-paused'))
             // Fade in content
             if (change.target.classList.contains('invisible') || change.target.classList.contains('fade-out')) {
               change.target.classList.remove('invisible', 'fade-out')
               change.target.classList.add('fade-in', 'a-fill-both','a-duration-mid')
-            }
-            if(!circus.classList.contains(position)) {
-              circus.classList.remove('absolute', 'fixed')
-              circus.classList.add(position)
             }
             if (scale) {
               headlogo.style.setProperty('--scale', scale)
@@ -139,6 +136,10 @@
         <path id="arrow" d="M1.07812 12L7.5451 6.51603L1.07813 1" fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
         <path id="caret" fill="none" d="M1.59863 1L20.0298 19.1L38.5687 1" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
         <path id="circle" d="" style="fill: var(--fill);" />
+        <linearGradient id="blue-grad" x1="18.8571" y1="3.75839" x2="16.0752" y2="28.0086" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#70D0E6"/>
+          <stop offset="1" stop-color="#3A7FF7"/>
+        </linearGradient>
         <linearGradient id="emblem-gradient" gradientTransform="rotate(94)">
           <stop
             offset="3%"
@@ -271,7 +272,17 @@
           style="transform: scale(var(--scale, 1))"
           class="df w-vm-100 m-auto-h pv3 h-3 justify-center t-origin-center tt t-duration-short t-ease" >
           <svg
-            class="h-100 mh2 pointer overflow-visible"
+            class="h-100 pointer overflow-visible"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            viewBox="0 0 420 400">
+            <use
+              href="#triangle"
+              fill="url(#blue-grad)"
+              style="transform-origin: 200px 200px;"
+              transform="translate(0, 60) rotate(30) scale(1.40)" />
+          </svg>
+          <svg
+            class="h-100 mr1 pointer overflow-visible"
             onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
             viewBox="0 0 50 50">
             <use
@@ -284,7 +295,6 @@
             <svg class="h-100" viewBox="0 0 160 32">
               <use href="#logo-letters"/>
             </svg>
-          </h1>
           </div>
       </header>
       <section
@@ -344,11 +354,33 @@
       </section>
       <section
         id="dazaar-app"
-        class="minh-vh-100 df rows p-columns align-center l-w-50 l-align-self-end p-justify-flex-end ss-center invisible"
-        data-position="fixed">
-        <div class="m4 body-width pre-line">
+        class="minh-vh-100 w-100 df relative rows p-columns align-center l-align-self-end justify-flex-end ss-center invisible">
+        <svg
+          id="dazaar-vision-logo"
+          class="t-ease w-vm-100 h-vm-100 highlight t-duration-mid t-origin-center"
+          style="transform: scale(var(--scale, 1)) translateX(var(--offsetX, 0)) translateY(var(--offsetY, 0)); transition-property: transform, opacity;"
+          viewBox="0 0 400 400">
+          <g class="t-ease t-duration-short" style="transition-property: color;">
+            <g class="t-ease t-duration-mid tt t-origin-center">
+              <use
+                href="#shape"
+                class="o-0 to a-paused ripple a-ease a-duration-yawn t-origin-center a-fill-both"
+                style="--pulse-from: .3; --pulse-to: .6; --opaque: .3; --invisible: .3; --fill: url('#iris-gradient')"/>
+            </g>
+            <g class="t-ease tt t-origin-center t-duration-mid">
+              <use
+                id="logo-iris"
+                href="#shape"
+                class="to t-duration-short t-origin-center"
+                style="transform: scale(.33); --fill: url('#iris-gradient');"
+                stroke-width="0"
+                stroke="hsla(var(--hue,var(--accentH)),var(--accentS),var(--lightness,var(--spotlight)),.1)" />
+            </g>
+          </g>
+        </svg>
+        <div class="m4 p-mt0 l-w-50 pre-line">
           <h2>Dazaar Vision</h2>
-          <p>
+          <p class="body-width">
             Dazaar Vision is a live video-streaming app. It allows you to set up
             live broadcasts and subscriptions. All Peer-to-peer, and in realtime.
             With the power of Dazaar you can customize payment options for your subscribers and viewers, without any centralized third-parties.
@@ -369,17 +401,24 @@
         </div>
       </section>
       <footer class="w-vm-100 df columns align-center align-self-center justify-center">
-        <svg class="w-3 h-3 mt4 overflow-visible" viewBox="0 0 50 50">
-          <use href="#emblem" style="--fill: url(#emblem-gradient);"/>
-        </svg>
         <p class="family-mono tc f-160 mb4 mt3 mh2" rel="description">
           Peer-to-Peer Internet and Marketplaces
         </p>
-        <div class="df f-70 justify-between align-end w-100">
+        <div class="df f-80 p-columns-reverse p-tc p-align-center justify-between align-end w-100">
           <div class="m3">
             <div class="h-2 mb2">
               <svg
-                class="h-100 mr1"
+                class="h-100 pointer overflow-visible"
+                onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+                viewBox="0 0 420 400">
+                <use
+                  href="#triangle"
+                  fill="url(#blue-grad)"
+                  style="transform-origin: 200px 200px;"
+                  transform="translate(0, 60) rotate(30) scale(1.40)" />
+              </svg>
+              <svg
+                class="h-100 pr1"
                 viewBox="0 0 50 50">
                 <use
                   href="#emblem"
@@ -395,7 +434,7 @@
             </div>
           </div>
           <div class="m3">
-            <p class="m0 tr" style="width: 12em;">
+            <p class="m0 p-tc tr" style="width: 12em;">
               Something to suggest or just want to say hello.<br />
               <a class="highlight bold hover-underline" href="mailto:info@dazaar.com">Contact us</a>
           </div>

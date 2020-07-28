@@ -93,7 +93,7 @@ h1,h2,h3,h4,h5 {
 .f-180 { font-size: 180%; }
 .f-160 { font-size: 160%; }
 .f-140 { font-size: 140%; }
-.f-70 { font-size: 70%; }
+.f-80 { font-size: 80%; }
 .f-50 { font-size: 50%; }
 .bold { font-weight: 600; }
 .superlight { font-weight: 100; }
@@ -167,6 +167,7 @@ h1,h2,h3,h4,h5 {
 .justify-center { justify-content: center; }
 .justify-between { justify-content: space-between; }
 .justify-around { justify-content: space-around; }
+.justify-flex-end { justify-content: flex-end; }
 .justify-stretch { justify-content: stretch; }
 .align-center { align-items: center; }
 .align-stretch { align-items: stretch; }
@@ -189,6 +190,7 @@ h1,h2,h3,h4,h5 {
 .a-delay { animation-delay: .8s; }
 .a-delay-short { animation-delay: .3s; }
 .a-ease-in-out { animation-timing-function: ease-in-out; }
+.a-paused { animation-play-state: paused; }
 .a-linear { animation-timing-function: linear; }
 .t-ease { transition-timing-function: ease; }
 .t-origin-center { transform-origin: center; }
@@ -276,14 +278,20 @@ main section.scrolled:first-child:after {
 }
 /* responsive utilities */
 @media (orientation: portrait) {
+  #dazaar-vision-logo { margin-bottom: -8rem; }
   .p-columns { flex-direction: column; }
   .p-rows { flex-direction: row; }
   .p-justify-flex-end { justify-content: flex-end; }
+  .p-align-center { align-items: center; }
+  .p-mt0 { margin-top: 0; }
+  .p-tc { text-align: center; }
+  .p-columns-reverse { flex-direction: column-reverse; }
   .centerfuck { 
     margin-top: calc(50vmax - 50vmin);
   }
 }
 @media (orientation: landscape) {
+  #dazaar-vision-logo { margin-right: -8rem; }
   .l-w-50 { width: 50%; }
   .l-align-self-end { align-self: flex-end; }
   .l-move-left { --offsetX: -25vmin; }
