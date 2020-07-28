@@ -278,7 +278,7 @@ main section.scrolled:first-child:after {
 }
 /* responsive utilities */
 @media (orientation: portrait) {
-  #dazaar-vision-logo { margin-bottom: -8rem; }
+  .p-absolute { position: absolute; }
   .p-columns { flex-direction: column; }
   .p-rows { flex-direction: row; }
   .p-justify-flex-end { justify-content: flex-end; }
