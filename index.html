@@ -23,7 +23,6 @@
       let lastPointCount = 2
       let plugTimeout = null
       document.addEventListener('DOMContentLoaded', () => {
-        //document.getElementById('shape').setAttribute('d', pointsOnCircle(lastPointCount, 180, 200, 200).map(toPathString).join(''))
         document.getElementById('triangle').setAttribute('d', pointsOnCircle(3, 180, 200, 200).map(toPathString).join(''))
         document.getElementById('circle').setAttribute('d', pointsOnCircle(120, 180, 200, 200).map(toPathString).join(''))
         const observer = new IntersectionObserver(onEntry, { threshold: [0.6] })
@@ -119,7 +118,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-169242451-1');
     </script>
   </head>
@@ -279,7 +277,7 @@
               href="#triangle"
               fill="url(#blue-grad)"
               style="transform-origin: 200px 200px;"
-              transform="translate(0, 60) rotate(30) scale(1.40)" />
+              transform="translate(0, 64) rotate(30) scale(1.45)" />
           </svg>
           <svg
             class="h-100 mr1 pointer overflow-visible"
@@ -292,8 +290,8 @@
           <h1 class="uppercase ls-big mb0 mt0 h-100 superlight pointer"
             onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
             <span class="h-0 db clip">Dazaar</span>
-            <svg class="h-100" viewBox="0 0 160 32">
-              <use href="#logo-letters"/>
+            <svg class="h-100 overflow-visible" viewBox="0 0 160 32">
+              <use href="#logo-letters" transform="scale(1.03)"/>
             </svg>
           </div>
       </header>
@@ -357,7 +355,7 @@
         class="minh-vh-100 w-100 df relative rows p-columns align-center l-align-self-end justify-flex-end ss-center invisible">
         <svg
           id="dazaar-vision-logo"
-          class="t-ease w-vm-100 h-vm-100 highlight t-duration-mid t-origin-center"
+          class="p-absolute top-0 t-ease w-vm-100 h-vm-100 highlight t-duration-mid t-origin-center"
           style="transform: scale(var(--scale, 1)) translateX(var(--offsetX, 0)) translateY(var(--offsetY, 0)); transition-property: transform, opacity;"
           viewBox="0 0 400 400">
           <g class="t-ease t-duration-short" style="transition-property: color;">
